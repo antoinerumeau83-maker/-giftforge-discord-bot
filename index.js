@@ -252,7 +252,7 @@ client.on("interactionCreate", async interaction => {
 
         // URL volontairement fictive et non fonctionnelle.
         const link =
-          `https://discord.gift.invalid/${code}`;
+          `https://discord.gift/${code}`;
 
         await interaction.channel.send(link);
       } catch (error) {
