@@ -16,7 +16,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const GUILD_ID = process.env.GUILD_ID;
 
 if (!TOKEN || !CLIENT_ID || !GUILD_ID) {
-  console.error("Il manque DISCORD_TOKEN, CLIENT_ID ou GUILD_ID.");
+  console.error("Il manque une variable : DISCORD_TOKEN, CLIENT_ID ou GUILD_ID.");
   process.exit(1);
 }
 
@@ -96,7 +96,7 @@ function generateLinks(number, length) {
     if (!codes.has(code)) {
       codes.add(code);
 
-      // Domaine fictif : aucune vérification de vrais cadeaux Discord.
+      // URL volontairement fictive et non fonctionnelle.
       links.push(`https://discord.gift.invalid/${code}`);
     }
   }
@@ -184,7 +184,7 @@ client.on("interactionCreate", async interaction => {
     }
 
     const file = new AttachmentBuilder(
-      Buffer.from(links.join("\n"), "utf8"),
+      Buffer.from(links.join("\n") + "\n", "utf8"),
       { name: "giftforge-links.txt" }
     );
 
