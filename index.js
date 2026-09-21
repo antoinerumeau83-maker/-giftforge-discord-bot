@@ -97,7 +97,7 @@ function generateLinks(number, length) {
       codes.add(code);
 
       // URL volontairement fictive et non fonctionnelle.
-      links.push(`https://discord.gift.invalid/${code}`);
+      links.push(`https://discord.gift/${code}`);
     }
   }
 
