@@ -1,12 +1,15 @@
 {
-  "name": "giftforge-discord-bot",
+  "name": "super-bot-discord",
   "version": "1.0.0",
+  "description": "Bot Discord complet : jeux, moderation, premium, bienvenue, panel de config",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.22.1",
-    "dotenv": "^17.2.2"
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
   }
 }
+
